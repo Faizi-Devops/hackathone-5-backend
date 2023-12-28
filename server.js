@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const userRegister = require("./routes/User");
 const category = require("./routes/Category")
+const mongoose = require("mongoose")
 
 
 const todo = require("./routes/Todo");
@@ -19,7 +20,13 @@ const port = 5000;
 
 // Make sure to define or retrieve your DATABASE_URL properly
 const DATABASE_URL = process.env.DATABASE_URL;
-connectDB(DATABASE_URL);
+// Database
+mongoose.connect(DATABASE_URL)
+    .then(()=>{
+        console.log('Database connection successful')
+    }).catch((err)=>{
+        console.log(err)
+    })
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
