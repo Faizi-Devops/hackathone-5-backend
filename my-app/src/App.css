@@ -1,0 +1,7 @@
+.error {
+    border: 1px solid red; /* Red border for input */
+  }
+  
+  .error-msg {
+    color: red; /* Red color for error message */
+  }
