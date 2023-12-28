@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 // Make sure to define or retrieve your DATABASE_URL properly
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = "mongodb+srv://Faizan_Ali:OIi3OLFcd3hDT2yB@cluster0.wjaq7px.mongodb.net/?retryWrites=true&w=majority";
 // Database
 mongoose
   .connect(DATABASE_URL)
